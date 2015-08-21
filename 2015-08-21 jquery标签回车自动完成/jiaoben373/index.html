@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery标签回车自动完成 - 站长素材</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/tabControl.js"></script>
+  <style type="text/css">
+  #tag{width:700px; height:30px; text-align:left; padding:10px; border:2px #E0E0E0 inset ; line-height:25px;}
+  /*input post tab*/
+div.radius_shadow{border:1px solid #DBDBDB;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;padding:5px;-webkit-box-shadow:0 0 10px #414141;-moz-box-shadow:0 0 10px #414141;box-shadow:0 0 10px #414141;font-size:12px;background:#fff;}
+span#radius{display:inline-block;float:none;font-size:12px;padding:2px 5px;margin:-2px 5px 15px;border:1px solid #E0E0E0; background-color:#F0F0F0;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;color:#000;}
+.tabinput{margin-left:5px;border:0;}
+a#deltab{cursor:pointer;display:inline-block;color:#808080;margin-left:5px;font-weight:bold;}
+a#deltab:hover{color:#D2D2D2;text-decoration:none;}
+#getTab{ margin-top:10px;border:1px solid #E0E0E0; background-color:#F0F0F0; padding:10px; cursor:pointer;}
+
+  </style>
+<script type="text/javascript">
+	$(function(){
+		$("#tag").tabControl({maxTabCount:5,tabW:80},"站长素材,jquery特效,jquery下载,");
+		$("#getTab").click(function(){
+			var v = $("#tag").getTabVals();
+			alert(v.join(","));
+		});
+	});
+</script>
+</head><body style="background:#fff;">
+
+<br /><br /><br /><br /><br />
+<center>
+
+
+
+ <div id="tag"></div>
+  <input id='getTab' type="button" value=" 提 交 ">
+</center>
+</body>
+</html>
